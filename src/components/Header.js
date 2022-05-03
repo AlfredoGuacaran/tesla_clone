@@ -1,14 +1,13 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
+import React, { useState } from 'react';import styled from 'styled-components';
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
-import { selectCars, SelectCars } from '../features/car/carSlice';
+import { selectCars } from '../features/car/carSlice';
 import { useSelector } from 'react-redux';
 
 function Header() {
   const [burgerStatus, setBurgerStatus] = useState(false);
   const cars = useSelector(selectCars);
-  console.log(cars);
+
   return (
     <Container>
       <a href='/'>
